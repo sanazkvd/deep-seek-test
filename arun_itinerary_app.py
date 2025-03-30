@@ -3,7 +3,7 @@ import requests
 import json
 
 # ========== CONFIGURATION ==========
-# API_KEY = st.secrets["API_KEY"]  # Store this securely in .streamlit/secrets.toml
+API_KEY = st.secrets["API_KEY"]  # Store this securely in .streamlit/secrets.toml
 # API_KEY='sk-bedcb944ad3d4bae9b9dfa4080af75ce'
 API_URL = "https://api.deepseek.com/v1/chat/completions"
 
