@@ -15,7 +15,29 @@ except Exception:
 API_URL = "https://api.deepseek.com/v1/chat/completions"
 
 placeholder.empty()
-
+st.markdown("""
+            <style>
+            .user-message {
+                background-color: #e0f0ff;        /* Light blue */
+                color: #000000;                   /* Black text */
+                padding: 0.75rem;
+                border-radius: 0.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .assistant-message {
+                background-color: #f0f0f0;        /* Light gray */
+                color: #000000;                   /* Black text */
+                padding: 0.75rem;
+                border-radius: 0.5rem;
+                margin-bottom: 1rem;
+            }
+            .chat-container {
+                max-height: 65vh;
+                overflow-y: auto;
+                padding-right: 1rem;
+            }
+            </style>
+        """, unsafe_allow_html=True)
 # ========== SESSION STATE INIT ==========
 if "system_message" not in st.session_state:
     st.session_state.system_message = {
@@ -99,11 +121,11 @@ if submitted and user_input.strip():
         st.markdown("---")
         st.subheader("🧑‍🏫 Arun:")
         st.markdown(user_input)
-
+      
         st.subheader("🤖 Assistant:")
         reply_placeholder = st.empty()
 
         full_text = ""
         for chunk in stream_deepseek_response(user_input):
             full_text += chunk
-            reply_placeholder.markdown(full_text)
+            reply_placeholder.markdown(f'<div class="assistant-message">{full_text}</div>', unsafe_allow_html=True)
