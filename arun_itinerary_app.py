@@ -49,7 +49,7 @@ st.markdown("Ask about your curated academic visit — including sessions, dinin
 
 # ========== FORM ==========
 with st.form("chat_form"):
-    user_input = st.text_input("Your question:", placeholder="e.g., What’s planned for Day 2 evening?")
+    user_input = st.text_input("Your question:", placeholder="Evening plans? Something quick between emails.")
     submitted = st.form_submit_button("Send")
 
 # ========== API RESPONSE STREAMING ==========
