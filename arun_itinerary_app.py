@@ -45,7 +45,7 @@ with st.sidebar:
     st.info("Built with DeepSeek API & Streamlit")
 
 # ========== HEADER ==========
-st.title("Professor Sundararajan's Bogotá Itinerary Assistant")
+st.title("Bogotá Itinerary Assistant")
 st.markdown("Ask about your curated academic visit — including sessions, dining, and select cultural experiences.")
 
 # ========== FORM ==========
@@ -98,7 +98,7 @@ def stream_deepseek_response(prompt):
 if submitted and user_input.strip():
     with st.spinner("Consulting the itinerary assistant..."):
         st.markdown("---")
-        st.subheader("🧑‍🏫 Professor Sundararajan:")
+        st.subheader("🧑‍🏫 Arun:")
         st.markdown(user_input)
 
         st.subheader("🤖 Assistant:")
