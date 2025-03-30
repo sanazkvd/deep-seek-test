@@ -1,7 +1,6 @@
 import streamlit as st
 import requests
 import json
-import streamlit as st
 
 placeholder = st.empty()
 placeholder.markdown("## 🧳 Bogotá Itinerary Assistant")
@@ -51,7 +50,7 @@ st.markdown("Ask about your curated academic visit — including sessions, dinin
 # ========== FORM ==========
 with st.form("chat_form"):
     user_input = st.text_input("Your question:", placeholder="e.g., What’s planned for Day 2 evening?")
-    submitted = st.form_submit_button("Ask")
+    submitted = st.form_submit_button("Send")
 
 # ========== API RESPONSE STREAMING ==========
 def stream_deepseek_response(prompt):
