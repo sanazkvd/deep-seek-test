@@ -1,6 +1,11 @@
 import streamlit as st
 import requests
 import json
+import streamlit as st
+
+placeholder = st.empty()
+placeholder.markdown("## 🧳 Bogotá Itinerary Assistant")
+placeholder.info("Initializing app... please wait a moment.")
 
 # ========== CONFIGURATION ==========
 try:
@@ -9,6 +14,8 @@ except Exception:
     API_KEY = "sk-bedcb944ad3d4bae9b9dfa4080af75ce"  # Local fallback (do not hardcode in prod)
 
 API_URL = "https://api.deepseek.com/v1/chat/completions"
+
+placeholder.empty()
 
 # ========== SESSION STATE INIT ==========
 if "system_message" not in st.session_state:
