@@ -7,10 +7,10 @@ placeholder.markdown("## 🧳 Bogotá Itinerary Assistant")
 placeholder.info("Initializing app... please wait a moment.")
 
 # ========== CONFIGURATION ==========
-try:
-    API_KEY = st.secrets["API_KEY"]  # For production
-except Exception:
-    API_KEY = "sk-bedcb944ad3d4bae9b9dfa4080af75ce"  # Local fallback (do not hardcode in prod)
+# try:
+API_KEY = st.secrets["API_KEY"]  # For production
+# except Exception:
+#     API_KEY = "sk-bedcb944ad3d4bae9b9dfa4080af75ce"  # Local fallback (do not hardcode in prod)
 
 API_URL = "https://api.deepseek.com/v1/chat/completions"
 
