@@ -119,7 +119,7 @@ def stream_deepseek_response(prompt):
 if submitted and user_input.strip():
     with st.spinner("Consulting the itinerary assistant..."):
         st.markdown("---")
-        st.subheader("🧑‍🏫 Arun:")
+        st.subheader("🧑‍🏫:")
         st.markdown(user_input)
       
         st.subheader("🤖 Assistant:")
